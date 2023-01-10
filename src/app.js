@@ -1,4 +1,5 @@
-const express = require("express");
+import express from "express";
+import fetch from "node-fetch";
 // Create the server instance.
 const app = express();
 // Configure the server instance to receive JSON data.
