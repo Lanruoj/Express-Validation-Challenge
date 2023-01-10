@@ -48,7 +48,7 @@ app.get("/", (request, response) => {
 });
 
 // POST localhost:3000
-app.post("/", async (request, response, next) => {
+app.post("/", (request, response, next) => {
   response.json({
     pokedexNumber: response.locals.pokedexNumber,
     name: response.locals.name,
