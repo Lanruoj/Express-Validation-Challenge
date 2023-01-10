@@ -8,6 +8,13 @@ app.use(express.urlencoded({ extended: true }));
 const baseURL = "https://pokeapi.co/api/v2/pokemon/";
 
 // localhost:3000
+app.get("/", (request, response) => {
+  response.json({
+    message: "Hello World!",
+  });
+});
+
+// localhost:3000
 app.post("/", async (request, response) => {
   // If this fetch request returns JSON, then we want to store it as an object that we can work with.
   let result = await fetch(baseURL + request.body.pokemonName).then((data) => {
